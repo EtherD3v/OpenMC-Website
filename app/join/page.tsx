@@ -38,7 +38,7 @@ export default function JoinPage() {
     const fetchServerStatus = async () => {
       try {
         const response = await fetch(
-          `https://api.mcsrvstat.us/2/beta.openmc.fr`
+          `https://api.mcsrvstat.us/2/play.openmc.fr`
         );
         const data = await response.json();
 
@@ -67,7 +67,7 @@ export default function JoinPage() {
   }, []);
 
   const copyIP = () => {
-    navigator.clipboard.writeText("beta.openmc.fr").then(() => {
+    navigator.clipboard.writeText("play.openmc.fr").then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
@@ -130,7 +130,7 @@ export default function JoinPage() {
             <div className="bg-card rounded-xl p-6 border shadow-sm">
               <h2 className="text-2xl font-bold mb-4">Adresse du serveur</h2>
               <div className="bg-background rounded-lg p-4 font-mono text-lg mb-4 flex items-center justify-between">
-                <span>beta.openmc.fr</span>
+                <span>play.openmc.fr</span>
                 <button
                   onClick={copyIP}
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-3 py-1 rounded text-sm transition-colors"
